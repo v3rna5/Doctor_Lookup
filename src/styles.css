@@ -1,18 +1,19 @@
+.card {
+  margin-bottom: 10px;
+}
+
+
+.hero-text {
+  font-size: 40px;
+  color: ivory;
+}
+
 body {
-    font-family: ProximaNovaReg, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: silver;
 }
-h3 {
-    color: #bb3794;
-}
-th {
-    text-align: left;
-}
-table {
-  font-size: 14px;
-}
-td,th {
-  height: 30px;
-  border-bottom: 1px dotted #d6d6d6;
-  vertical-align: top;
-  padding-right: 15px;
+
+.search-again {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
 }
