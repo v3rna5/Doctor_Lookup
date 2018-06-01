@@ -1,1 +1,32 @@
-
+<head>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
+</head>
+<body>
+<h3>BetterDoctor - Specialties</h3>
+<div id="content-placeholder"></div>
+<script id="specialties-template" type="text/x-handlebars-template">
+    <table>
+        <thead>
+        <th>uid</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Description</th>
+        <th>Actor</th>
+        <th>Actors</th>
+        </thead>
+        <tbody>
+        {{#data}}
+        <tr>
+            <td>{{uid}}</td>
+            <td>{{name}}</td>
+            <td>{{category}}</td>
+            <td>{{description}}</td>
+            <td>{{actor}}</td>
+            <td>{{actors}}</td>
+        </tr>
+        {{/data}}
+        </tbody>
+    </table>
+</script>
+</body>
