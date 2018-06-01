@@ -1,13 +1,11 @@
 # _Doctor Lookup_
 
-#### _An application that determines a user’s age based on a planet’s solar years and lifespan_
-
 #### By _Verna Santos_6.01.18_
 
 ## Description
 
-_The user input age in years and convert to planet's solar years and how he/she left to live_
-website where users may enter a medical issue (ie: “sore throat”, "rash", etc.) into a form, submit it, and receive a list of doctors in your city (Portland or Seattle depending on where you are) who can treat their medical issue.
+_An application to find a Seattle doctor based on a user-entered or a doctor's name._
+
 
 ## Specifications
 
@@ -17,15 +15,15 @@ website where users may enter a medical issue (ie: “sore throat”, "rash", et
 
 * _Return a Doctor's name to in the Seattle area that fit the search query_
   * _Example Input: Santos_
-  * _Example Output: Dr. E Santos, Dr. A Santos etc.._
+  * _Example Output: Dr. E Santos_
 
 * _Return full Doctor's information: first name, last name, address, phone number, website weather or not the doctor is accepting new patients_
   * _Example Input: Dr. E Santos_
   * _Example Output: Ernesto Santos, 123 Main St Seattle WA 98122 - wwww.esantos.com - accepting new clients_
 
 * _Return an error if the API call results in an error_
-
-
+* _Example Input: hello_
+* _Example Output: There are no result_
 
 
 

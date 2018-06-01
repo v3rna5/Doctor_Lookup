@@ -1,41 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-     <link href="build/css/vendor.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="build/js/vendor.min.js"></script>
-    <!-- <script type="text/javascript" src="build/js/app.js"></script> -->
+  <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <title>Find Doctor</title>
   </head>
   <body>
     <div class="container">
-      <div class="well">
+      <div class="jumbotron">
         <div class="hero-text">Find Doctor</div>
       </div>
-      <!-- <div class="searchboxes">
-        <div class="row">
-          <div class="col">
-            <form id="searchByName">
-              <h5>Search by doctor's name</h5>
-              <input type="text" id="doctorName">
-              <button type="submit" id="nameSubmit">Search</button>
-            </form>
-          </div> -->
-          <div class="col">
-            <form id="searchByKeyword">
-              <h5>Search by medical issue</h5>
-              <input type="text" id="keyword">
-              <button type="submit" id="keywordSubmit">Search</button>
-            </form>
-          </div>
-        </div><!--row-->
-      </div>
-      <!-- <div id="doctorSearchResponse">
-      </div> -->
-      <div id="keywordSearchResponse"></div>
 
-      <p class="search-again">Not finding what you need? <a href="index.html">Try another search</a></p>
+        <label for="symptom">Find a Doctor or Enter your symptons:</label>
+        <input id="query" type="text">
+        <button class="btn-success" id="lookup">Find Doctor</button>
+        <div id="results"></div>
+      </div>
 
     </div><!--container-->
   </body>
