@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <title>Find Doctor</title>
-  </head>
-  <body>
+<head>
+  <title>BetterDoctor Search</title>
+
     <div class="container">
-      <div class="jumbotron">
-        <div class="hero-text">Find Doctor</div>
+      <h3>BetterDoctor Search</h3>
+    </div>
+  </div>
+</head>
+<body>
+  <div class="col-md-8">
+    <ul>
+      <label class="doctorName">Search Doctor</label>
+      <input id="doctorName" type="text"><br>
+      <label class="medicalCondition">Symptom</label>
+      <input id="medicalCondition" type="text"><p>
+        <button type="button" class="btn btn-success" id="buttonSub">Submit</button><p>
+        </ul>
       </div>
-
-        <label for="symptom">Find a Doctor or Enter your symptons:</label>
-        <input id="query" type="text">
-        <button class="btn-success" id="lookup">Find Doctor</button>
-        <div id="results"></div>
+       <div id="doctorInfo">
+        <div class="card-body">
+          <p>Result:</p>
+          <p class="card"> <span id="errors"></span> </p>
+        </div>
       </div>
-
-    </div><!--container-->
-  </body>
+    </div>
+  </div>
+</body>
 </html>

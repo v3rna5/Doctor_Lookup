@@ -1,15 +1,20 @@
-import $ from 'jquery';
+class BetterDoctor{
+  constructor(){}
 
-
-class Doctor {
-
-  constructor (name, street1, street2, city_state, phone, website, newPatients) {
-    this.name = name;
-    this.street1 = street1;
-    this.street2 = street2;
-    this.city_state = city_state;
-    this.phone = phone;
-    this.website = website;
-    this.newPatients = newPatients;
+  doctorCall(Name, Condition){
+    return new Promise(function(resolve, reject){
+      let request = new XMLHttpRequest();
+      let url = `https://api.betterdoctor.com/2016-03-01/doctors?name=${Name}&query=${Condition}&location=47.6062%2C-122.3321%2C25&user_location=47.6062%2C-122.3321&sort=best-match-asc&skip=0&limit=10&user_key=${process.env.exports.apiKey}`;
+      request.onload = function(){
+        if(this.status === 200){
+          resolve(request.response);
+        } else {
+          reject(Error(request.statusText));
+        }
+      }
+      request.open("GET", url, true);
+      request.send();
+    });
   }
 }
+export {BetterDoctor}
