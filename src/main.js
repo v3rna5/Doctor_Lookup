@@ -9,10 +9,10 @@ import { BetterDoctor } from './doctor-lookup.js';
 $(document).ready(function() {
   $('#buttonSub').click(function() {
 
-    let Name = $("#doctorName").val();
-    let Condition = $('#medicalCondition').val();
-    $('#doctorName').val('');
-    $('#medicalCondition').val('');
+    let Name = $("#doctor").val();
+    let Condition = $('#symptom').val();
+    $('#doctor').val('');
+    $('#symptom').val('');
     let DoctorApi = new BetterDoctor();
     let DoctorData = DoctorApi.doctorCall(Name, Condition);
     $('.clear').remove();
@@ -20,9 +20,10 @@ $(document).ready(function() {
     DoctorData.then(function(response) {
       let body = JSON.parse(response);
       let bodyData = body.data;
-      let nothingReturned = ("No results found.");
+      let noResult = ("No results found.");
+
       if ( bodyData.length < 1) {
-        $('.card-text').append(nothingReturned);
+        $('.card').append(noResult);
         $('#doctorInfo').show();
       } else {
         $.each(body.data, function(i, data){
